@@ -1,15 +1,7 @@
 language: python
 
-# sudo false implies containerized builds
-sudo: false
-
 python:
   - 3.4
-
-cache: pip
-
-install:
-  - python setup.py install
 
 script:
   - pytest
