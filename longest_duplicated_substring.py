@@ -3,9 +3,6 @@
 import sys
 
 
-# O(n^4) approach: generate all possible substrings and
-# compare each for equality.
-
 def longest_duplicated_substring(string):
     """Return the longest duplicated substring.
 
@@ -25,8 +22,6 @@ def longest_duplicated_substring(string):
     string_length = len(string)
     for i in range(string_length):
         for j in range(i+1,string_length):
-            # Alternate approach with while loop here and max update outside.
-            # Can also break length check into function.
             for substring_length in range(string_length-j):
                 if string[i+substring_length] != string[j+substring_length]:
                     break
