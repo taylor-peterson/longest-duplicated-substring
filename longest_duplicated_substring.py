@@ -3,7 +3,7 @@
 import sys
 
 
-def longest_duplicated_substring(string):
+def brute_force_optimal(string):
     """Return the longest duplicated substring.
 
     Keyword Arguments:
@@ -30,4 +30,4 @@ def longest_duplicated_substring(string):
     return lds
 
 if __name__ == "__main__":
-    print(longest_duplicated_substring(' '.join(map(str, sys.argv[1:]))))
+    print(brute_force_optimal(' '.join(map(str, sys.argv[1:]))))

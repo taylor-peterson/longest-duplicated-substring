@@ -29,5 +29,5 @@ scenarios = pytest.mark.idparametrize  # Convenience variable.
     'No substring': ('Goat', ''),
     'No string': ('', ''),
 })
-def test_brute_force(string, result):
-    assert longest_duplicated_substring(string) == result
+def test_brute_force_optimal(string, result):
+    assert brute_force_optimal(string) == result
