@@ -3,11 +3,6 @@
 import sys
 
 
-# Runtime of common operations:
-#  string equality - O(n)
-#  string slice of size M (python) - O(M)
-#  substring (java) - O(n) as of Java 7
-
 # O(n^4) approach: generate all possible substrings and
 # compare each for equality.
 

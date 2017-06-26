@@ -20,3 +20,8 @@ There are a wide range of approaches, ranging from O(n^4) all the way down to li
 
 Many common approaches are provided in this package in Python; translating them to
 other languages is a trivial exercise left to the reader.
+
+## Runtime of Common Operations
+* String comparison: O(n)
+* String slice of size m: O(m)
+* Substring: O(n) (note that this was O(1) prior to Java 7)
