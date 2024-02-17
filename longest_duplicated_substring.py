@@ -48,3 +48,21 @@ def brute_force_optimal(string):
                 if substring_length + 1 > len(lds):
                     lds = string[i:i+substring_length+1]
     return lds
+
+
+def brute_force_hash(string):
+    """Generate all substrings, hash each, keep track of the longest duplicate as we go. O(n^3)"""
+    lds = ""
+    seen = set()
+
+    n = len(string)
+    for i in range(n):
+        for j in range(i+1, n):
+            ss = string[i:j+1]
+            print(ss)
+            if ss in seen and len(ss) > len(lds):
+                lds = ss
+            else:
+                seen.add(ss)
+
+    return lds
