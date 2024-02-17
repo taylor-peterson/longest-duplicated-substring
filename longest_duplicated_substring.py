@@ -2,6 +2,27 @@
 """Sample solutions to the longest duplicated substring problem."""
 
 
+def brute_force_naive(string):
+    """Generate all possible substrings, compare each for equality, and keep the longest.
+
+    Ends up being O(n^5)!
+    """
+    n = len(string)
+
+    substrings = []
+    for i in range(n):
+        for j in range(i, n):
+            substrings.append(string[i:j+1])
+
+    lds = ""
+    for i, a in enumerate(substrings):
+        for b in substrings[i+1:]:
+            if a == b and len(a) > len(lds):
+                lds = a
+
+    return lds
+
+
 def brute_force_optimal(string):
     """Return the longest duplicated substring.
 

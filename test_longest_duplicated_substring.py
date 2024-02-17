@@ -17,4 +17,5 @@ import longest_duplicated_substring
 )
 def test_brute_force_optimal(string, result):
     """Run all test cases against all solutions."""
+    assert longest_duplicated_substring.brute_force_naive(string) == result
     assert longest_duplicated_substring.brute_force_optimal(string) == result
