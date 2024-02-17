@@ -1,7 +1,3 @@
-[![build status](
-  http://img.shields.io/travis/taylor-peterson/longest-duplicated-substring/master.svg?style=flat)](
- https://travis-ci.org/taylor-peterson/longest-duplicated-substring)
-
 # Overview
 This problem appears in [Programming Pearls](http://www.amazon.com/Programming-Pearls-2nd-Jon-Bentley/dp/0201657880/ref=sr_1_1?ie=UTF8&s=books&qid=1268415457&sr=8-1).
 
