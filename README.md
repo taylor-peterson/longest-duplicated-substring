@@ -1,3 +1,5 @@
+[![Python application](https://github.com/taylor-peterson/longest-duplicated-substring/actions/workflows/python-app.yml/badge.svg)](https://github.com/taylor-peterson/longest-duplicated-substring/actions/workflows/python-app.yml)
+
 # Overview
 This problem appears in [Programming Pearls](http://www.amazon.com/Programming-Pearls-2nd-Jon-Bentley/dp/0201657880/ref=sr_1_1?ie=UTF8&s=books&qid=1268415457&sr=8-1).
 

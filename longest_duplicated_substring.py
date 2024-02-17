@@ -1,7 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """Sample solutions to the longest duplicated substring problem."""
-
-import sys
 
 
 def brute_force_optimal(string):
@@ -29,7 +27,3 @@ def brute_force_optimal(string):
                 if substring_length + 1 > len(lds):
                     lds = string[i:i+substring_length+1]
     return lds
-
-
-if __name__ == "__main__":
-    print(brute_force_optimal(' '.join(map(str, sys.argv[1:]))))
