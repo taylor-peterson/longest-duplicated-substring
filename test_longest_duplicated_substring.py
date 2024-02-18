@@ -20,3 +20,4 @@ def test_brute_force_optimal(string, result):
     assert longest_duplicated_substring.brute_force_naive(string) == result
     assert longest_duplicated_substring.brute_force_optimal(string) == result
     assert longest_duplicated_substring.brute_force_hash(string) == result
+    assert longest_duplicated_substring.binary_search(string) == result

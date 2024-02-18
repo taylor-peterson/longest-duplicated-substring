@@ -3,7 +3,7 @@
 
 
 def brute_force_naive(string):
-    """Generate all possible substrings, compare each for equality, and keep the longest.
+    """Generate all substrings, compare each for equality, and keep the longest.
 
     Ends up being O(n^5)!
     """
@@ -51,7 +51,7 @@ def brute_force_optimal(string):
 
 
 def brute_force_hash(string):
-    """Generate all substrings, hash each, keep track of the longest duplicate as we go. O(n^3)"""
+    """Generate all substrings, hash each, log the longest duplicate. O(n^3)"""
     lds = ""
     seen = set()
 
@@ -64,5 +64,36 @@ def brute_force_hash(string):
                 lds = ss
             else:
                 seen.add(ss)
+
+    return lds
+
+
+def binary_search(string):
+    """
+    Instead of looking at substrings of all possible lengths,
+    halve the search space at each go.
+
+    Note that if there is a duplicated substring of length 10,
+    there's also one of length 9,8,7...
+    """
+    n = len(string)
+    left = 0
+    right = n - 1  # max possible duplicated substring length
+
+    lds = ""
+    while left <= right:
+        m = (left + right) // 2
+        seen = set()
+        for i in range(n-m+1):
+            ss = string[i:i+m]
+            if ss in seen:
+                lds = ss
+                break
+            else:
+                seen.add(ss)
+        if len(lds) == m:
+            left = m+1
+        else:
+            right = m-1
 
     return lds
